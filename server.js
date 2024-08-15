@@ -1,9 +1,8 @@
-var fs = require('fs');
-var os = require('os');
+var http = require('http');
+const formidable = require('formidable');
 
-var user = os.userInfo();
-console.log(user.username);
+var errors = formidable.formidableErrors;
 
-fs.appendFile('greeting.txt', 'hi ' + user.username + ' !', ()=>{
-    console.log('file written');
+const server = http.createServer( async , (req,res) => {
+    
 })
